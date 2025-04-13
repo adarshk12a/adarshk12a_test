@@ -1,0 +1,78 @@
+### Strings
+print("hello")
+def check_age(age):
+    if int(age)>18:
+        print('Adult')
+    else:
+        print("Minor")
+
+##age= input("enter the age-> ")
+##check_age(age)
+
+# sort the string with lower chars first
+str1= 'James'
+middle_index= (len(str1)-1)/2
+str2=str1[0]+str1[int(middle_index)]+str1[-1]
+print(str2)
+# middle and upper chars
+str1= 'PyNaTive'
+lower=[]
+upper=[]
+for i in str1:
+    if  i.islower():
+        lower.append(i)
+    else:
+        upper.append(i)
+
+final=''.join(lower+upper)
+print(final)
+
+#count chars, numbers and special chars in string
+str1 = "P@#yn26at^&i5ve"
+chars=[]
+nums=[]
+special=[]
+for i in str1:
+    if i.isalpha():
+        chars.append(i)
+    elif i.isdigit():
+        nums.append(i)
+    else:
+        special.append(i)
+len_chars=len(chars)
+print("len_chars->", len_chars)
+
+#Create a mixed String using the following rules
+s1 = "Abc"
+s2 = "Xyz"
+
+s2=s2[::-1]
+print(s2)
+
+#
+
+#Write a program to count occurrences of all characters within a string
+
+str1 = "Apple"
+result_dict=dict()
+for i in str1:
+    count= str1.count(i)
+    result_dict[i]=count
+print(result_dict)
+
+str1 = 'Emma-is-a-data-scientist'
+str1=str1.split('-')
+print(str1)
+str2="-".join(str1)
+print(str2)
+
+str1 = 'I am 25 years and 10 months old'
+str2=[]
+str1= str1.split(" ")
+print(str1)
+for i in str1:
+    if not i.isdigit():
+        str2.append(i)
+
+print(" ".join(str2))
+
